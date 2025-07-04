@@ -41,7 +41,7 @@ client.on('message', async message => {
 
     try {
         // Send message to Python service
-        const pythonServiceUrl = 'http://localhost:8000/process-message'; // Replace with your Python service URL if different
+        const pythonServiceUrl = 'http://agent_logic:8000/process-message'; // Replace with your Python service URL if different
         const response = await axios.post(pythonServiceUrl, {
             user_id: user_id,
             message: user_message
