@@ -1,0 +1,53 @@
+# Ambientes Virtuais do Python
+# Pasta que contém as dependências do Python para não enviar ao Git.
+.venv/
+venv/
+env/
+
+# Cache e Bytecode do Python
+# Arquivos temporários gerados pelo Python.
+__pycache__/
+*.pyc
+
+# Dependências do Node.js
+# Pasta que contém todas as bibliotecas do Node.js. É a mais importante a ser ignorada.
+node_modules/
+
+# Arquivos de Sessão do WhatsApp
+# Contém as credenciais de autenticação da sua sessão do WhatsApp. É um dado sensível.
+.wwebjs_auth/
+agente-criativa-xyz/whatsapp_handler_node/.wwebjs_auth/
+
+# Arquivos de Variáveis de Ambiente
+# Contêm segredos, chaves de API e configurações locais. NUNCA devem ir para o repositório.
+.env
+*.env
+
+# Logs de Erro
+# Arquivos de log gerados por npm ou outras ferramentas em caso de erro.
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de Sistema Operacional
+# Metadados gerados pelo macOS e Windows.
+.DS_Store
+Thumbs.db
+
+# Configurações de IDEs
+# Pastas de configuração de editores de código como VS Code ou JetBrains.
+.vscode/
+.idea/
+
+# Python
+agent_logic_python/__pycache__/
+agent_logic_python/.env
+agent_logic_python/.venv/
+agent_logic_python/venv/
+
+# Node.js
+whatsapp_handler_node/node_modules/
+whatsapp_handler_node/.wwebjs_auth/
+
+# VSCode/Editor
+.vscode/

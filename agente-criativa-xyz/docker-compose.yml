@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  agent_logic:
+    build:
+      context: ./agent_logic_python
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./agent_logic_python:/app
+    # depends_on:
+    #   - whatsapp_handler # Uncomment if agent_logic depends on whatsapp_handler starting first
+
+  whatsapp_handler:
+    build:
+      context: ./whatsapp_handler_node
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Example port, adjust if needed
+    volumes:
+      - ./whatsapp_handler_node:/app
+      - /app/node_modules # Avoid copying node_modules from host
+    # depends_on:
+    #   - agent_logic # Uncomment if whatsapp_handler depends on agent_logic starting first
+
+# You might need to define Dockerfiles for each service
+# Create ./agent_logic_python/Dockerfile and ./whatsapp_handler_node/Dockerfile
