@@ -29,5 +29,19 @@ services:
     # depends_on:
     #   - agent_logic # Uncomment if whatsapp_handler depends on agent_logic starting first
 
+  google_calendar_mcp:
+    build:
+      context: ./google-calendar-mcp
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./google-calendar-mcp/gcp-oauth.keys.json:/app/gcp-oauth.keys.json
+    environment:
+      - GOOGLE_OAUTH_CREDENTIALS=/app/gcp-oauth.keys.json
+      - MCP_SERVER_TRANSPORT=http
+      - MCP_SERVER_PORT=8001
+    restart: unless-stopped
+
 # You might need to define Dockerfiles for each service
 # Create ./agent_logic_python/Dockerfile and ./whatsapp_handler_node/Dockerfile
