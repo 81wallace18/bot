@@ -1,6 +1,19 @@
+# Refatoração: ponto de entrada para CrewAI
+from crew.agents import get_agents
+from crew.tasks import get_tasks
+from crew.crew import run_crew
+
 conversation_state = {}
 
 def handle_message(user_id: str, message: str):
+    """
+    Função de integração: recebe mensagem do usuário, aciona CrewAI e retorna resposta.
+    """
+    # Aqui, você pode adaptar para acionar a Crew conforme o fluxo desejado
+    # Exemplo: run_crew(user_id, message)
+    return run_crew(user_id, message)
+
+def handle_message_old(user_id: str, message: str):
     """Handles incoming messages and manages conversation state."""
     # Get or initialize the user's state
     state = conversation_state.get(user_id, {"state": "START", "data": {}})
