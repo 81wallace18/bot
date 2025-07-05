@@ -17,6 +17,7 @@ node_modules/
 # Contém as credenciais de autenticação da sua sessão do WhatsApp. É um dado sensível.
 .wwebjs_auth/
 agente-criativa-xyz/whatsapp_handler_node/.wwebjs_auth/
+agente-criativa-xyz/whatsapp_handler_node/.wwebjs_cache
 
 # Arquivos de Variáveis de Ambiente
 # Contêm segredos, chaves de API e configurações locais. NUNCA devem ir para o repositório.
