@@ -1,5 +1,5 @@
 import random
-from crewai_tools import BaseTool
+from crewai.tools import BaseTool
 
 class ProtocolTool(BaseTool):
     name = "gerar_protocolo"

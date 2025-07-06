@@ -1,4 +1,4 @@
-from crewai_tools import MCPServerAdapter
+from crewai.tools import MCPServerAdapter
 
 clickup_server_params = {
     "url": "http://localhost:8002/mcp",

@@ -1,5 +1,5 @@
 import re
-from crewai_tools import BaseTool
+from crewai.tools import BaseTool
 from typing import Dict, Optional
 
 class ContactTool(BaseTool):

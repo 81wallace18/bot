@@ -1,5 +1,5 @@
 from crewai import Agent
-from crewai_tools import MCPServerAdapter
+from crewai.tools import MCPServerAdapter
 from tools.protocol_tool import ProtocolTool
 from tools.date_tool import DateTool
 from tools.contact_tool import ContactTool

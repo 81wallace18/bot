@@ -1,4 +1,4 @@
-from crewai_tools import BaseTool
+from crewai.tools import BaseTool
 from datetime import datetime, timedelta
 
 class DateTool(BaseTool):

@@ -7,8 +7,9 @@ pydantic==2.5.0
 python-multipart==0.0.6
 
 # CrewAI and related tools
-crewai==0.5.0
-crewai-tools==0.0.1
+crewai==0.35.8
+crewai-tools[mcp]==0.2.7
+langchain_community==0.2.0
 
 # Additional utilities
 python-dateutil==2.8.2
