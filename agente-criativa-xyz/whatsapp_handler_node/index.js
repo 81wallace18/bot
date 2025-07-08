@@ -34,6 +34,15 @@ client.on('ready', () => {
 
 // Listen for incoming messages
 client.on('message', async message => {
+    // Get chat information
+    const chat = await message.getChat();
+
+    // Ignore messages from groups
+    if (chat.isGroup) {
+        console.log(`Message from group "${chat.name}" ignored.`);
+        return;
+    }
+
     console.log('Message Received:', message.body);
 
     const user_id = message.from;
